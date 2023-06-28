@@ -3,11 +3,17 @@
 {% block title%} Bienvenue | {{ parent() }}{% endblock %}
 
 {% block body %}
-<h1>Bonjour depuis la France</h1>
+<div class="flex-center full-height">
+    <div class="content">
+        <img src="{{ asset('/img/tour-eiffel.jpg') }}" alt="tour eiffel" />
 
-<p>Il est actuellement {{ 'now'|date('H:i A', 'Europe/Paris') }} en France.</p>
+        <h1 class="title">Bonjour depuis la France</h1>
 
-<hr />
+        <p class="message">Il est actuellement {{ 'now'|date('H:i A', 'Europe/Paris') }} chez moi.</p>
 
-<p>&copy; Copyright 2023 - {{ 'now'|date('Y', 'Europe/Paris') }}</p>
+        <hr />
+
+        <p>&copy; Copyright 2023 - {{ 'now'|date('Y', 'Europe/Paris') }}</p>
+    </div>
+</div>
 {% endblock %}
